@@ -1,0 +1,181 @@
+fileFormatVersion: 2
+guid: d066f9890274f41d483821899b77beed
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: gale-swing_0
+    21300002: gale-swing_1
+    21300004: gale-swing_2
+    21300006: gale-swing_3
+    21300008: gale-swing_4
+    21300010: gale-swing_5
+    21300012: gale-swing_6
+    21300014: gale-swing_7
+    21300016: gale-swing_8
+    21300018: gale-swing_9
+    21300020: gale-swing_10
+    21300022: gale-swing_11
+    21300024: gale-swing_12
+    21300026: gale-swing_13
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: gale-swing_0
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 1758
+        width: 146
+        height: 155
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gale-swing_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 1598
+        width: 120
+        height: 143
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gale-swing_2
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 1439
+        width: 96
+        height: 122
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gale-swing_3
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 1278
+        width: 148
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gale-swing_4
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1118
+        width: 163
+        height: 111
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gale-swing_5
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 959
+        width: 159
+        height: 146
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gale-swing_6
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 798
+        width: 234
+        height: 148
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gale-swing_9
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 479
+        width: 239
+        height: 143
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gale-swing_10
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 318
+        width: 239
+        height: 144
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gale-swing_11
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 158
+        width: 239
+        height: 143
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gale-swing_12
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 0
+        width: 239
+        height: 142
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gale-swing_13
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 639
+        width: 238
+        height: 147
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

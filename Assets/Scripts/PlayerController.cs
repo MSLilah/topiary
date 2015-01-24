@@ -23,16 +23,59 @@ public class PlayerController : MonoBehaviour {
 	private bool canFire = true;
 	private float fireTimer = 0.0f;
 	public float fireInterval = 0.2f;
+	
+	public bool canAttack = true;
+	private float attackTimer = 0.0f;
+	private float attackLength = 2.0f;
+
+	private Animator animator;
+
+	/////////////////////
+	/// Unity Functions
+	/////////////////////
 
 	void Start() {
+		animator = GetComponent<Animator> ();
 		Flip ();
 	}
 	
 	void FixedUpdate () {
 		MovePlayer ();
 		Fire ();
+		Attack ();
 	}
 
+	void Update() {
+		if (Input.GetAxisRaw ("Jump") != 0) {
+			if (grounded) {
+				rigidbody2D.AddForce (new Vector2(0, jumpForceMagnitude));
+			}
+			else if (wallJumpLeft) {
+				rigidbody2D.AddForce (new Vector2(jumpForceMagnitude / 2, jumpForceMagnitude));
+			}
+			else if (wallJumpRight) {
+				rigidbody2D.AddForce (new Vector2(-jumpForceMagnitude / 2, jumpForceMagnitude));
+			}
+		}
+		
+		if (!canFire) {
+			fireTimer += Time.deltaTime;
+			if (fireTimer >= fireInterval) {
+				canFire = true;
+			}
+		}
+	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		if (other.gameObject.tag == "Enemy") {
+			HedgeController hc = other.gameObject.GetComponent<HedgeController>();
+			hc.DecreaseState();
+		}
+	}
+
+	/////////////////////
+	/// Our Functions
+	/////////////////////
 	void MovePlayer() {
 		float move = Input.GetAxis ("Horizontal");
 
@@ -41,6 +84,13 @@ public class PlayerController : MonoBehaviour {
 		else {
 			float velocityChange = Mathf.Clamp(move * maxSpeed / 4 + rigidbody2D.velocity.x, -maxSpeed, maxSpeed);
 			rigidbody2D.velocity = new Vector2(velocityChange, rigidbody2D.velocity.y);
+		}
+
+		if (move != 0) {
+			animator.SetBool("Move", true);
+		}
+		else {
+			animator.SetBool ("Move", false);
 		}
 
 		if ((move > 0 && !facingRight) ||
@@ -67,25 +117,20 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-	void Update() {
-		if (Input.GetAxisRaw ("Jump") != 0) {
-			if (grounded) {
-				rigidbody2D.AddForce (new Vector2(0, jumpForceMagnitude));
-			}
-			else if (wallJumpLeft) {
-				rigidbody2D.AddForce (new Vector2(jumpForceMagnitude / 2, jumpForceMagnitude));
-			}
-			else if (wallJumpRight) {
-				rigidbody2D.AddForce (new Vector2(-jumpForceMagnitude / 2, jumpForceMagnitude));
-			}
+	void Attack() {
+		if (Input.GetAxisRaw ("Fire1") != 0 && canAttack) {
+			animator.SetBool("Attack", true);
 		}
+	}
 
-		if (!canFire) {
-			fireTimer += Time.deltaTime;
-			if (fireTimer >= fireInterval) {
-				canFire = true;
-			}
-		}
+	void TurnOffAttackCollider() {
+		gameObject.GetComponents<BoxCollider2D>()[1].enabled = false;
+		canAttack = true;
+		animator.SetBool ("Attack", false);
+	}
+
+	void TurnOnAttackCollider() {
+		gameObject.GetComponents<BoxCollider2D>()[1].enabled = true;
 	}
 
 	void Flip() {
@@ -95,4 +140,5 @@ public class PlayerController : MonoBehaviour {
 		scale.x *= -1;
 		transform.localScale = scale;
 	}
+
 }

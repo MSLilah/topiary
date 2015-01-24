@@ -1,11 +1,15 @@
 fileFormatVersion: 2
-guid: 7120f1862fe1f4d2bac80a6631ad2c6d
+guid: 84dcf1a96a79b4f7286941572dd7a7e4
 TextureImporter:
   fileIDToRecycleName:
-    21300000: gale-walk_0
-    21300002: gale-walk_1
-    21300004: gale-walk_2
-    21300006: gale-walk_3
+    21300000: gale-walk (1)_0
+    21300002: gale-walk (1)_1
+    21300004: gale-walk (1)_2
+    21300006: gale-walk (1)_3
+    21300008: gale-walk_0
+    21300010: gale-walk_1
+    21300012: gale-walk_2
+    21300014: gale-walk_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -50,40 +54,40 @@ TextureImporter:
     - name: gale-walk_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 120
-        width: 37
-        height: 39
+        x: 8
+        y: 480
+        width: 148
+        height: 156
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: gale-walk_1
       rect:
         serializedVersion: 2
-        x: 2
-        y: 80
-        width: 38
-        height: 37
+        x: 8
+        y: 320
+        width: 152
+        height: 148
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: gale-walk_2
       rect:
         serializedVersion: 2
-        x: 2
-        y: 40
-        width: 36
-        height: 35
+        x: 8
+        y: 160
+        width: 144
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: gale-walk_3
       rect:
         serializedVersion: 2
-        x: 2
+        x: 8
         y: 0
-        width: 36
-        height: 38
+        width: 144
+        height: 152
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
