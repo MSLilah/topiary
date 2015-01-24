@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour {
 
 	public float maxSpeed = 10f;
 	public float jumpForceMagnitude = 100f;
-	private bool facingRight = true;
+	private bool facingRight = false;
 
 	bool grounded = false;
 	public Transform groundCheck;
@@ -23,6 +23,10 @@ public class PlayerController : MonoBehaviour {
 	private bool canFire = true;
 	private float fireTimer = 0.0f;
 	public float fireInterval = 0.2f;
+
+	void Start() {
+		Flip ();
+	}
 	
 	void FixedUpdate () {
 		MovePlayer ();
@@ -86,5 +90,9 @@ public class PlayerController : MonoBehaviour {
 
 	void Flip() {
 		facingRight = !facingRight;
+
+		Vector3 scale = transform.localScale;
+		scale.x *= -1;
+		transform.localScale = scale;
 	}
 }
