@@ -4,11 +4,8 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 
 	public float maxSpeed = 10f;
-	public float jumpForceMagnitude = 700f;
-
-	private bool canJumpGround = true;
+	public float jumpForceMagnitude = 100f;
 	private bool facingRight = true;
-	private bool canJumpWall = false;
 
 	bool grounded = false;
 	public Transform groundCheck;
@@ -20,9 +17,16 @@ public class PlayerController : MonoBehaviour {
 	public Transform wallCheckRight;
 	public Transform wallCheckLeft;
 	public LayerMask whatIsWall;
+
+	public GameObject bullet;
+	public Transform bulletSpawner;
+	private bool canFire = true;
+	private float fireTimer = 0.0f;
+	public float fireInterval = 0.2f;
 	
 	void FixedUpdate () {
 		MovePlayer ();
+		Fire ();
 	}
 
 	void MovePlayer() {
@@ -50,6 +54,15 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
+	void Fire() {
+		if (Input.GetAxisRaw ("Fire1") != 0 && canFire) {
+			GameObject newBullet = Instantiate(bullet, bulletSpawner.position, Quaternion.identity) as GameObject;
+			newBullet.GetComponent<BulletController>().facingRight = facingRight;
+			fireTimer = 0.0f;
+			canFire = false;
+		}
+	}
+
 	void Update() {
 		if (Input.GetAxisRaw ("Jump") != 0) {
 			if (grounded) {
@@ -60,6 +73,13 @@ public class PlayerController : MonoBehaviour {
 			}
 			else if (wallJumpRight) {
 				rigidbody2D.AddForce (new Vector2(-jumpForceMagnitude / 2, jumpForceMagnitude));
+			}
+		}
+
+		if (!canFire) {
+			fireTimer += Time.deltaTime;
+			if (fireTimer >= fireInterval) {
+				canFire = true;
 			}
 		}
 	}
