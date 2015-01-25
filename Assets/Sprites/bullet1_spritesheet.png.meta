@@ -7,6 +7,7 @@ TextureImporter:
     21300004: bullet1_spritesheet_2
     21300006: bullet1_spritesheet_3
     21300008: bullet1_spritesheet_4
+    21300010: bullet1_spritesheet_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -95,6 +96,16 @@ TextureImporter:
         y: 0
         width: 27
         height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bullet1_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 8
+        width: 27
+        height: 3
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

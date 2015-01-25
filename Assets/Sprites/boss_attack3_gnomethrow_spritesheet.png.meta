@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: d54f0154eefa04ce9b727255802703cd
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: boss_attack3_gnomethrow_spritesheet_0
+    21300002: boss_attack3_gnomethrow_spritesheet_1
+    21300004: boss_attack3_gnomethrow_spritesheet_2
+    21300006: boss_attack3_gnomethrow_spritesheet_3
+    21300008: boss_attack3_gnomethrow_spritesheet_4
+    21300010: boss_attack3_gnomethrow_spritesheet_5
+    21300012: boss_attack3_gnomethrow_spritesheet_6
+    21300014: boss_attack3_gnomethrow_spritesheet_7
+    21300016: boss_attack3_gnomethrow_spritesheet_8
+    21300018: boss_attack3_gnomethrow_spritesheet_9
+    21300020: boss_attack3_gnomethrow_spritesheet_10
+    21300022: boss_attack3_gnomethrow_spritesheet_11
+    21300024: boss_attack3_gnomethrow_spritesheet_12
+    21300026: boss_attack3_gnomethrow_spritesheet_13
+    21300028: boss_attack3_gnomethrow_spritesheet_19
+    21300030: boss_attack3_gnomethrow_spritesheet_24
+    21300032: boss_attack3_gnomethrow_spritesheet_29
+    21300034: boss_attack3_gnomethrow_spritesheet_33
+    21300036: boss_attack3_gnomethrow_spritesheet_36
+    21300038: boss_attack3_gnomethrow_spritesheet_40
+    21300040: boss_attack3_gnomethrow_spritesheet_45
+    21300042: boss_attack3_gnomethrow_spritesheet_50
+    21300044: boss_attack3_gnomethrow_spritesheet_58
+    21300046: boss_attack3_gnomethrow_spritesheet_59
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -21,17 +45,17 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -1
-  maxTextureSize: 1024
+  textureFormat: -3
+  maxTextureSize: 4096
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +66,246 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: boss_attack3_gnomethrow_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 8387
+        width: 235
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_attack3_gnomethrow_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 8021
+        width: 236
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_attack3_gnomethrow_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 7629
+        width: 236
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_attack3_gnomethrow_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 7250
+        width: 245
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_attack3_gnomethrow_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 6870
+        width: 242
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_attack3_gnomethrow_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 6490
+        width: 196
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_attack3_gnomethrow_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 6110
+        width: 196
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_attack3_gnomethrow_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 5728
+        width: 197
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_attack3_gnomethrow_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 5368
+        width: 197
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_attack3_gnomethrow_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 5018
+        width: 198
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_attack3_gnomethrow_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 4657
+        width: 197
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_attack3_gnomethrow_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 4298
+        width: 212
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_attack3_gnomethrow_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 3939
+        width: 212
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_attack3_gnomethrow_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 3580
+        width: 258
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_attack3_gnomethrow_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 2877
+        width: 308
+        height: 302
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_attack3_gnomethrow_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 2535
+        width: 310
+        height: 299
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_attack3_gnomethrow_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 2191
+        width: 344
+        height: 303
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_attack3_gnomethrow_spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1849
+        width: 376
+        height: 277
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_attack3_gnomethrow_spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1498
+        width: 371
+        height: 247
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_attack3_gnomethrow_spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1138
+        width: 388
+        height: 210
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_attack3_gnomethrow_spritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 787
+        width: 389
+        height: 210
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_attack3_gnomethrow_spritesheet_50
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 426
+        width: 391
+        height: 210
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_attack3_gnomethrow_spritesheet_58
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 67
+        width: 380
+        height: 210
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_attack3_gnomethrow_spritesheet_59
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 3228
+        width: 280
+        height: 236
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

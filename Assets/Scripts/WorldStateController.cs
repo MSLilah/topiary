@@ -18,7 +18,7 @@ public class WorldStateController : MonoBehaviour {
 	void Update() {
 		if (switchTrigger) {
 			timer += Time.deltaTime;
-			if (timer > 2.0f) {
+			if (timer > timerLife) {
 				Debug.Log ("Changing World State");
 				ChangeWorldState();
 				timer = 0.0f;
