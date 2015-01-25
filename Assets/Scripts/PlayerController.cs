@@ -107,6 +107,8 @@ public class PlayerController : MonoBehaviour {
 			float velocityChange = Mathf.Clamp(move * maxSpeed / 4 + rigidbody2D.velocity.x, -maxSpeed, maxSpeed);
 			rigidbody2D.velocity = new Vector2(velocityChange, rigidbody2D.velocity.y);
 		}
+		
+		Debug.Log (grounded);
 
 		if (move != 0) {
 			animator.SetBool("Move", true);
