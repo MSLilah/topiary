@@ -1,0 +1,135 @@
+fileFormatVersion: 2
+guid: eca6dcef8fb05441395024eb076f6122
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: mechagale-walk_0
+    21300002: mechagale-walk_1
+    21300004: mechagale-walk_2
+    21300006: mechagale-walk_3
+    21300008: mechagale-walk_4
+    21300010: mechagale-walk_5
+    21300012: mechagale-walk_6
+    21300014: mechagale-walk_7
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: mechagale-walk_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1539
+        width: 167
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mechagale-walk_1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1319
+        width: 186
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mechagale-walk_2
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1099
+        width: 203
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mechagale-walk_3
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 879
+        width: 167
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mechagale-walk_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 659
+        width: 167
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mechagale-walk_5
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 439
+        width: 174
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mechagale-walk_6
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 219
+        width: 191
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mechagale-walk_7
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 203
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

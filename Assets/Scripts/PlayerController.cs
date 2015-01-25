@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour {
 	public Transform wallCheckRight;
 	public Transform wallCheckLeft;
 	public LayerMask whatIsWall;
+	
+	private bool falling = false;
 
 	private Animator animator;
 	
@@ -29,6 +31,7 @@ public class PlayerController : MonoBehaviour {
 
 	void Start() {
 		animator = GetComponent<Animator> ();
+		animator.SetBool("LightWorld", true);
 		Flip ();
 	}
 	
@@ -37,6 +40,11 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Update() {
+		if (grounded && rigidbody2D.velocity.y == 0) {
+			animator.SetBool ("Fall", false);
+			falling = false;
+		}
+		
 		if (wallJumped) {
 			wallJumpedTimer += Time.deltaTime;
 			if (wallJumpedTimer > 0.2f) {
@@ -51,17 +59,32 @@ public class PlayerController : MonoBehaviour {
 			if (grounded) {
 				rigidbody2D.AddForce (new Vector2(0, jumpForceMagnitude));
 				canJump = false;
+				animator.SetBool ("Jump", true);
+				animator.SetBool("Fall", false);
+				falling = false;
 			}
 			else if (wallJumpLeft) {
 				rigidbody2D.AddForce (new Vector2(jumpForceMagnitude, jumpForceMagnitude));
 				canJump = false;
 				wallJumped = true;
+				animator.SetBool ("Jump", true);
+				animator.SetBool("Fall", false);
+				falling = false;
 			}
 			else if (wallJumpRight) {
 				rigidbody2D.AddForce (new Vector2(-jumpForceMagnitude, jumpForceMagnitude));
 				canJump = false;
 				wallJumped = true;
+				animator.SetBool ("Jump", true);
+				animator.SetBool("Fall", false);
+				falling = false;
 			}
+		}
+		
+		if (!falling && rigidbody2D.velocity.y <= 0 && !grounded) {
+			falling = true;
+			animator.SetBool ("Jump", false);
+			animator.SetBool("Fall", true);
 		}
 	}
 
@@ -114,6 +137,9 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	public void WorldStateChange(bool lightWorld) {
+	
+		animator.SetBool("LightWorld", lightWorld);
+		
 		if (lightWorld) {
 			GetComponent<GunController>().enabled = false;
 			GetComponent<MeleeAttackController>().enabled = true;

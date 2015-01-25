@@ -16,7 +16,6 @@ public class WorldStateController : MonoBehaviour {
 	}
 	
 	void Update() {
-		
 		if (switchTrigger) {
 			timer += Time.deltaTime;
 			if (timer > 2.0f) {
@@ -40,6 +39,8 @@ public class WorldStateController : MonoBehaviour {
 		lightWorld = !lightWorld;
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
 		GameObject[] enemies = GameObject.FindGameObjectsWithTag ("Enemy");
+		
+		Debug.Log (player);
 		
 		player.GetComponent<PlayerController>().WorldStateChange(lightWorld);
 		

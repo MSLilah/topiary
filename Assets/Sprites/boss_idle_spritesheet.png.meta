@@ -1,0 +1,531 @@
+fileFormatVersion: 2
+guid: e9f2e70f10541443c8c2d746adca6e0a
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: boss_idle_spritesheet_0
+    21300002: boss_idle_spritesheet_1
+    21300004: boss_idle_spritesheet_2
+    21300006: boss_idle_spritesheet_3
+    21300008: boss_idle_spritesheet_4
+    21300010: boss_idle_spritesheet_5
+    21300012: boss_idle_spritesheet_6
+    21300014: boss_idle_spritesheet_7
+    21300016: boss_idle_spritesheet_8
+    21300018: boss_idle_spritesheet_9
+    21300020: boss_idle_spritesheet_10
+    21300022: boss_idle_spritesheet_11
+    21300024: boss_idle_spritesheet_12
+    21300026: boss_idle_spritesheet_13
+    21300028: boss_idle_spritesheet_14
+    21300030: boss_idle_spritesheet_15
+    21300032: boss_idle_spritesheet_16
+    21300034: boss_idle_spritesheet_17
+    21300036: boss_idle_spritesheet_18
+    21300038: boss_idle_spritesheet_19
+    21300040: boss_idle_spritesheet_20
+    21300042: boss_idle_spritesheet_21
+    21300044: boss_idle_spritesheet_22
+    21300046: boss_idle_spritesheet_23
+    21300048: boss_idle_spritesheet_24
+    21300050: boss_idle_spritesheet_25
+    21300052: boss_idle_spritesheet_26
+    21300054: boss_idle_spritesheet_27
+    21300056: boss_idle_spritesheet_28
+    21300058: boss_idle_spritesheet_29
+    21300060: boss_idle_spritesheet_30
+    21300062: boss_idle_spritesheet_31
+    21300064: boss_idle_spritesheet_32
+    21300066: boss_idle_spritesheet_33
+    21300068: boss_idle_spritesheet_34
+    21300070: boss_idle_spritesheet_35
+    21300072: boss_idle_spritesheet_36
+    21300074: boss_idle_spritesheet_37
+    21300076: boss_idle_spritesheet_38
+    21300078: boss_idle_spritesheet_39
+    21300080: boss_idle_spritesheet_40
+    21300082: boss_idle_spritesheet_41
+    21300084: boss_idle_spritesheet_42
+    21300086: boss_idle_spritesheet_43
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 2
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: boss_idle_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 8986
+        width: 236
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 8777
+        width: 228
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 8568
+        width: 228
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3342
+        width: 239
+        height: 208
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 3133
+        width: 228
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 2924
+        width: 228
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 239
+        height: 207
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 3552
+        width: 233
+        height: 206
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 3761
+        width: 233
+        height: 207
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 3971
+        width: 234
+        height: 207
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 4180
+        width: 233
+        height: 206
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 4389
+        width: 237
+        height: 206
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 4598
+        width: 238
+        height: 209
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 4807
+        width: 230
+        height: 206
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 5015
+        width: 233
+        height: 208
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 5225
+        width: 232
+        height: 206
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 5432
+        width: 232
+        height: 210
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 5642
+        width: 232
+        height: 208
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 5853
+        width: 232
+        height: 207
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 6060
+        width: 235
+        height: 208
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 6269
+        width: 234
+        height: 208
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 6480
+        width: 229
+        height: 207
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 6687
+        width: 229
+        height: 209
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 6896
+        width: 230
+        height: 210
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 7106
+        width: 232
+        height: 208
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 7314
+        width: 225
+        height: 206
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 7522
+        width: 225
+        height: 210
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 7733
+        width: 226
+        height: 207
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 7941
+        width: 225
+        height: 209
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 8148
+        width: 225
+        height: 211
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 8360
+        width: 223
+        height: 207
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 209
+        width: 240
+        height: 207
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 416
+        width: 233
+        height: 209
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 626
+        width: 235
+        height: 208
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 834
+        width: 230
+        height: 208
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1044
+        width: 231
+        height: 208
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1251
+        width: 230
+        height: 210
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1463
+        width: 230
+        height: 207
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1673
+        width: 224
+        height: 206
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1881
+        width: 225
+        height: 207
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 2091
+        width: 226
+        height: 207
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 2299
+        width: 225
+        height: 209
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 2509
+        width: 226
+        height: 206
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_idle_spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 2717
+        width: 224
+        height: 205
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
