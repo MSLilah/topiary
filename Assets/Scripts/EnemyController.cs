@@ -12,7 +12,7 @@ public class EnemyController : MonoBehaviour {
 	private float walkSpeed = 2.0f;
 	private float walkingDirection = 1.0f;
 	public  bool walkingRight = true;
-	private bool facingRight = true;
+	private bool facingRight = false;
 
 	public float enemyHealth = 3.0f;
 
@@ -22,6 +22,7 @@ public class EnemyController : MonoBehaviour {
 	void Start ()
 	{
 		walkingDirection = 1.0f;
+		Flip ();
 	}
 	
 	void OnTriggerEnter2D (Collider2D col)
@@ -89,5 +90,9 @@ public class EnemyController : MonoBehaviour {
 	
 	void Flip() {
 		facingRight = !facingRight;
+		
+		Vector3 scale = transform.localScale;
+		scale.x *= -1;
+		transform.localScale = scale;
 	}
 }

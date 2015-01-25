@@ -9,7 +9,7 @@ public class WorldStateController : MonoBehaviour {
 	
 	public float minTime = 5.0f;
 	public float maxTime = 15.0f;
-	private bool switchTrigger = false;
+	private bool switchTrigger = true;
 	
 	void Start() {
 		//ChangeWorldState ();

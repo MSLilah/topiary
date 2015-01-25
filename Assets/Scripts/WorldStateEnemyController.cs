@@ -3,6 +3,13 @@ using System.Collections;
 
 public class WorldStateEnemyController : MonoBehaviour {
 
+	private Animator animator;
+	
+	void Start() {
+		animator = GetComponent<Animator>();
+		animator.SetBool ("LightWorld", true);
+	}
+
 	public void WorldStateChange(bool lightWorld) {
 		HedgeController hc = GetComponent<HedgeController>();
 		EnemyController ec = GetComponent<EnemyController>();
@@ -12,6 +19,7 @@ public class WorldStateEnemyController : MonoBehaviour {
 			renderer.enabled = true;
 			collider2D.enabled = true;
 			rigidbody2D.isKinematic = true;
+			animator.SetBool ("LightWorld", true);
 			GetComponents<BoxCollider2D>()[1].enabled = false;
 			if (ec.enemyHealth <= 0.0f) {
 				hc.SetState(HedgeController.HedgeState.OVERGROWN);
@@ -24,6 +32,7 @@ public class WorldStateEnemyController : MonoBehaviour {
 			hc.enabled = false;
 			ec.enabled = true;
 			rigidbody2D.isKinematic = false;
+			animator.SetBool ("LightWorld", false);
 			GetComponents<BoxCollider2D>()[1].enabled = true;
 			if (hc.state == HedgeController.HedgeState.OVERGROWN) {
 				ec.enemyHealth = 0.0f;

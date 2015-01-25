@@ -1,20 +1,20 @@
 fileFormatVersion: 2
-guid: 4f2d3d80421b041adaaffb8eecc72512
+guid: b0ce744bab7384c22a49d94e2ad9b530
 TextureImporter:
   fileIDToRecycleName:
-    21300000: gnomeRun_spritesheet_0
-    21300002: gnomeRun_spritesheet_1
-    21300004: gnomeRun_spritesheet_2
-    21300006: gnomeRun_spritesheet_3
-    21300008: gnomeRun_spritesheet_4
-    21300010: gnomeRun_spritesheet_5
-    21300012: gnomeRun_spritesheet_6
-    21300014: gnomeRun_spritesheet_7
-    21300016: gnomeRun_spritesheet_8
-    21300018: gnomeRun_spritesheet_9
-    21300020: gnomeRun_spritesheet_10
-    21300022: gnomeRun_spritesheet_11
-    21300024: gnomeRun_spritesheet_12
+    21300000: gnomeRun_spritesheet_resize_0
+    21300002: gnomeRun_spritesheet_resize_1
+    21300004: gnomeRun_spritesheet_resize_2
+    21300006: gnomeRun_spritesheet_resize_3
+    21300008: gnomeRun_spritesheet_resize_4
+    21300010: gnomeRun_spritesheet_resize_5
+    21300012: gnomeRun_spritesheet_resize_6
+    21300014: gnomeRun_spritesheet_resize_7
+    21300016: gnomeRun_spritesheet_resize_8
+    21300018: gnomeRun_spritesheet_resize_9
+    21300020: gnomeRun_spritesheet_resize_10
+    21300022: gnomeRun_spritesheet_resize_11
+    21300024: gnomeRun_spritesheet_resize_12
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -56,133 +56,133 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: gnomeRun_spritesheet_0
+    - name: gnomeRun_spritesheet_resize_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 16
-        width: 20
-        height: 27
+        x: 7
+        y: 47
+        width: 63
+        height: 84
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: gnomeRun_spritesheet_1
+    - name: gnomeRun_spritesheet_resize_1
       rect:
         serializedVersion: 2
-        x: 29
-        y: 16
-        width: 24
-        height: 27
+        x: 86
+        y: 47
+        width: 74
+        height: 84
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: gnomeRun_spritesheet_2
+    - name: gnomeRun_spritesheet_resize_2
       rect:
         serializedVersion: 2
-        x: 59
-        y: 16
-        width: 22
-        height: 28
+        x: 175
+        y: 47
+        width: 69
+        height: 86
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: gnomeRun_spritesheet_3
+    - name: gnomeRun_spritesheet_resize_3
       rect:
         serializedVersion: 2
-        x: 89
-        y: 16
-        width: 22
-        height: 28
+        x: 266
+        y: 47
+        width: 68
+        height: 86
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: gnomeRun_spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 15
-        width: 20
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: gnomeRun_spritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 150
-        y: 16
-        width: 20
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: gnomeRun_spritesheet_6
-      rect:
-        serializedVersion: 2
-        x: 180
-        y: 16
-        width: 20
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: gnomeRun_spritesheet_7
-      rect:
-        serializedVersion: 2
-        x: 210
-        y: 15
-        width: 23
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: gnomeRun_spritesheet_8
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 15
-        width: 22
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: gnomeRun_spritesheet_9
-      rect:
-        serializedVersion: 2
-        x: 270
-        y: 15
-        width: 22
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: gnomeRun_spritesheet_10
-      rect:
-        serializedVersion: 2
-        x: 299
-        y: 16
-        width: 21
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: gnomeRun_spritesheet_11
-      rect:
-        serializedVersion: 2
-        x: 329
-        y: 15
-        width: 21
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: gnomeRun_spritesheet_12
+    - name: gnomeRun_spritesheet_resize_4
       rect:
         serializedVersion: 2
         x: 359
-        y: 15
-        width: 21
-        height: 28
+        y: 44
+        width: 62
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gnomeRun_spritesheet_resize_5
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 47
+        width: 63
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gnomeRun_spritesheet_resize_6
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 47
+        width: 62
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gnomeRun_spritesheet_resize_7
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 44
+        width: 71
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gnomeRun_spritesheet_resize_8
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 44
+        width: 68
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gnomeRun_spritesheet_resize_9
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 44
+        width: 68
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gnomeRun_spritesheet_resize_10
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 47
+        width: 65
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gnomeRun_spritesheet_resize_11
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 44
+        width: 65
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: gnomeRun_spritesheet_resize_12
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 44
+        width: 65
+        height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
