@@ -38,7 +38,7 @@ public class WorldStateEnemyController : MonoBehaviour {
 				ec.enemyHealth = 0.0f;
 			}
 			else {
-				ec.enemyHealth = 3.0f;
+				ec.enemyHealth = 1.0f;
 			}
 		}
 	}
