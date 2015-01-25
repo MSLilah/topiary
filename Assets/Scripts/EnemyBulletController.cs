@@ -14,6 +14,8 @@ public class EnemyBulletController : MonoBehaviour {
 		else {
 			rigidbody2D.velocity = -Vector2.right * bulletSpeed;
 		}
+
+		Destroy (gameObject, 2.0f);
 	}
 	
 	void OnTriggerEnter2D(Collider2D other) {

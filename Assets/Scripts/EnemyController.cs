@@ -14,7 +14,7 @@ public class EnemyController : MonoBehaviour {
 	public  bool walkingRight = true;
 	private bool facingRight = false;
 
-	public float enemyHealth = 3.0f;
+	public float enemyHealth = 1.0f;
 
 
 	Vector2 walkAmount;
