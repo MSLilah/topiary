@@ -1,0 +1,344 @@
+fileFormatVersion: 2
+guid: 596bc1c091ea044cdb78806e76f1072e
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: boss_death_spritesheet_0
+    21300002: boss_death_spritesheet_1
+    21300004: boss_death_spritesheet_2
+    21300006: boss_death_spritesheet_3
+    21300008: boss_death_spritesheet_4
+    21300010: boss_death_spritesheet_5
+    21300012: boss_death_spritesheet_6
+    21300014: boss_death_spritesheet_7
+    21300016: boss_death_spritesheet_8
+    21300018: boss_death_spritesheet_9
+    21300020: boss_death_spritesheet_10
+    21300022: boss_death_spritesheet_11
+    21300024: boss_death_spritesheet_12
+    21300026: boss_death_spritesheet_13
+    21300028: boss_death_spritesheet_14
+    21300030: boss_death_spritesheet_15
+    21300032: boss_death_spritesheet_16
+    21300034: boss_death_spritesheet_17
+    21300036: boss_death_spritesheet_18
+    21300038: boss_death_spritesheet_19
+    21300040: boss_death_spritesheet_20
+    21300042: boss_death_spritesheet_21
+    21300044: boss_death_spritesheet_22
+    21300046: boss_death_spritesheet_23
+    21300048: boss_death_spritesheet_24
+    21300050: boss_death_spritesheet_25
+    21300052: boss_death_spritesheet_26
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: boss_death_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 5805
+        width: 234
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 5582
+        width: 234
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 5359
+        width: 234
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 5136
+        width: 258
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 4913
+        width: 257
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 4690
+        width: 270
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 4467
+        width: 270
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 4244
+        width: 270
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 4021
+        width: 237
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 3798
+        width: 237
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 3575
+        width: 237
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 3352
+        width: 237
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 3129
+        width: 237
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 2906
+        width: 236
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 2683
+        width: 235
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 2460
+        width: 236
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 2237
+        width: 235
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 2014
+        width: 236
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 1791
+        width: 235
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1567
+        width: 249
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1343
+        width: 249
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1119
+        width: 266
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 894
+        width: 266
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 670
+        width: 272
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 447
+        width: 272
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 223
+        width: 272
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: boss_death_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 272
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

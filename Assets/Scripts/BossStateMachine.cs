@@ -34,12 +34,17 @@ public class BossStateMachine : MonoBehaviour {
 	
 	private Vector2 moveForce;
 	private Vector2 upForce;
+	
+	private Animator animator;
+	
+	private bool spawnedGnomes = false;
 
 	Dictionary <BossStates, Action> fsm = new Dictionary<BossStates, Action> ();
 
 	// Use this for initialization
 	void Start () 
 	{
+		animator = GetComponent<Animator>();
 		fsm.Add (BossStates.DEATH, DeathState);
 		fsm.Add (BossStates.GNOME, GnomeState);
 		fsm.Add (BossStates.IDLE, IdleState);
@@ -47,6 +52,7 @@ public class BossStateMachine : MonoBehaviour {
 		fsm.Add (BossStates.WHIP, WhipState);
 
 		SetState (BossStates.IDLE);
+		
 
 	}
 
@@ -61,6 +67,10 @@ public class BossStateMachine : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		if (bossHealth <= 0 && curState != BossStates.DEATH) {
+			SetState(BossStates.DEATH);
+			animator.SetTrigger ("Dead");
+		}
 		fsm[curState].Invoke ();
 	}
 
@@ -79,17 +89,18 @@ public class BossStateMachine : MonoBehaviour {
 
 	public void GnomeState ()
 	{
-		stateTimer += Time.deltaTime;
-
-		if (stateTimer >= 3.0f) 
-		{
-			Instantiate (bossGnome, gnomeSpawn1.position, Quaternion.identity);
-			Instantiate (bossGnome, gnomeSpawn2.position, Quaternion.identity);
-			Instantiate (bossGnome, gnomeSpawn3.position, Quaternion.identity);
-			Instantiate (bossGnome, gnomeSpawn4.position, Quaternion.identity);
-
-			SetState (BossStates.IDLE);
-		}
+		
+//		stateTimer += Time.deltaTime;
+//
+//		if (stateTimer >= 3.0f) 
+//		{
+//			Instantiate (bossGnome, gnomeSpawn1.position, Quaternion.identity);
+//			Instantiate (bossGnome, gnomeSpawn2.position, Quaternion.identity);
+//			Instantiate (bossGnome, gnomeSpawn3.position, Quaternion.identity);
+//			Instantiate (bossGnome, gnomeSpawn4.position, Quaternion.identity);
+//
+//			SetState (BossStates.IDLE);
+//		}
 	}
 
 	public void IdleState ()
@@ -100,6 +111,7 @@ public class BossStateMachine : MonoBehaviour {
 		if (stateTimer >= 5.0f) 
 		{
 			SetState (BossStates.WHIP);
+			animator.SetTrigger("Slash");
 			stateTimer = 0.0f;
 		}
 	}
@@ -112,8 +124,9 @@ public class BossStateMachine : MonoBehaviour {
 
 	public void WhipState ()
 	{
-		Instantiate (whipCollider, whipTrans.position, Quaternion.identity);
-		SetState (BossStates.GNOME);
+//		Instantiate (whipCollider, whipTrans.position, Quaternion.identity);
+//		SetState (BossStates.GNOME);
+//		animator.SetTrigger ("SpawnGnomes");
 	}
 
 	public void MoveBoss ()
@@ -122,6 +135,23 @@ public class BossStateMachine : MonoBehaviour {
 
 	public void spawnGnomes ()
 	{
-
+		Instantiate (bossGnome, gnomeSpawn1.position, Quaternion.identity);
+		Instantiate (bossGnome, gnomeSpawn2.position, Quaternion.identity);
+		Instantiate (bossGnome, gnomeSpawn3.position, Quaternion.identity);
+		Instantiate (bossGnome, gnomeSpawn4.position, Quaternion.identity);
+		spawnedGnomes = true;
+		SetState (BossStates.IDLE);
+		animator.SetTrigger ("Idle");
+	}
+	
+	public void finishWhip() {
+		if (!spawnedGnomes) {
+			SetState (BossStates.GNOME);
+			animator.SetTrigger ("SpawnGnomes");
+		}
+		else {
+			SetState (BossStates.IDLE);
+			animator.SetTrigger("Idle");
+		}
 	}
 }
