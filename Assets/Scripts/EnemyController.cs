@@ -15,6 +15,7 @@ public class EnemyController : MonoBehaviour {
 	private bool facingRight = false;
 
 	public float enemyHealth = 1.0f;
+	private AudioSource dieAudio;
 
 
 	Vector2 walkAmount;
@@ -23,6 +24,8 @@ public class EnemyController : MonoBehaviour {
 	{
 		walkingDirection = 1.0f;
 		Flip ();
+		AudioSource[] audios = GetComponents<AudioSource>();
+		dieAudio = audios [0];
 	}
 	
 	void OnTriggerEnter2D (Collider2D col)
@@ -88,6 +91,7 @@ public class EnemyController : MonoBehaviour {
 			collider2D.enabled = false;
 			rigidbody2D.isKinematic = true;
 			enabled = false;
+			dieAudio.Play();
 		}
 	}
 	

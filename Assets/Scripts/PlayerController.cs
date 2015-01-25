@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour {
 	
 	public int score = 0;
 
+	private AudioSource jumpAudio;
+
 	private Animator animator;
 	
 	/////////////////////
@@ -35,6 +37,8 @@ public class PlayerController : MonoBehaviour {
 		animator = GetComponent<Animator> ();
 		animator.SetBool("LightWorld", true);
 		Flip ();
+		AudioSource[] audios = GetComponents<AudioSource>();
+		jumpAudio = audios[0];
 	}
 	
 	void FixedUpdate () {
@@ -64,6 +68,7 @@ public class PlayerController : MonoBehaviour {
 				animator.SetBool ("Jump", true);
 				animator.SetBool("Fall", false);
 				falling = false;
+				jumpAudio.Play();
 			}
 			else if (wallJumpLeft) {
 				rigidbody2D.AddForce (new Vector2(jumpForceMagnitude, jumpForceMagnitude));
@@ -72,6 +77,7 @@ public class PlayerController : MonoBehaviour {
 				animator.SetBool ("Jump", true);
 				animator.SetBool("Fall", false);
 				falling = false;
+				jumpAudio.Play();
 			}
 			else if (wallJumpRight) {
 				rigidbody2D.AddForce (new Vector2(-jumpForceMagnitude, jumpForceMagnitude));
@@ -80,6 +86,7 @@ public class PlayerController : MonoBehaviour {
 				animator.SetBool ("Jump", true);
 				animator.SetBool("Fall", false);
 				falling = false;
+				jumpAudio.Play();
 			}
 		}
 		

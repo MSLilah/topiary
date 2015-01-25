@@ -10,9 +10,18 @@ public class WorldStateController : MonoBehaviour {
 	public float minTime = 5.0f;
 	public float maxTime = 15.0f;
 	private bool switchTrigger = false;
+
+	private AudioSource lightWorldMusic;
+	private AudioSource darkWorldMusic;
+	private AudioSource worldChange;
 	
 	void Start() {
 		//ChangeWorldState ();
+		AudioSource[] audios = GetComponents<AudioSource>();
+		darkWorldMusic = audios [0];
+		lightWorldMusic = audios [1];
+		worldChange = audios [2];
+		lightWorldMusic.Play();
 	}
 	
 	void Update() {
@@ -37,6 +46,14 @@ public class WorldStateController : MonoBehaviour {
 	
 	public void ChangeWorldState() {
 		lightWorld = !lightWorld;
+		worldChange.Play ();
+		if (lightWorld) {
+			lightWorldMusic.Play ();
+			darkWorldMusic.Stop ();
+		} else {
+			lightWorldMusic.Stop ();
+			darkWorldMusic.Play ();
+		}
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
 		GameObject[] enemies = GameObject.FindGameObjectsWithTag ("Enemy");
 		GameObject[] terrain = GameObject.FindGameObjectsWithTag("Terrain");
