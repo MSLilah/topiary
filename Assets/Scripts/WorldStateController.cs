@@ -39,6 +39,7 @@ public class WorldStateController : MonoBehaviour {
 		lightWorld = !lightWorld;
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
 		GameObject[] enemies = GameObject.FindGameObjectsWithTag ("Enemy");
+		GameObject[] terrain = GameObject.FindGameObjectsWithTag("Terrain");
 		
 		Debug.Log (player);
 		
@@ -46,6 +47,10 @@ public class WorldStateController : MonoBehaviour {
 		
 		foreach (GameObject enemy in enemies) {
 			enemy.GetComponent<WorldStateEnemyController>().WorldStateChange(lightWorld);
+		}
+		
+		foreach (GameObject block in terrain) {
+			block.GetComponent<TerrainController>().WorldStateChange(lightWorld);
 		}
 	}
 }
