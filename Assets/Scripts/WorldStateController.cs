@@ -9,6 +9,7 @@ public class WorldStateController : MonoBehaviour {
 	void Update() {
 		timer += Time.deltaTime;
 		if (timer > 2.0f) {
+			Debug.Log ("Changing World State");
 			ChangeWorldState();
 			timer = 0.0f;
 		}
