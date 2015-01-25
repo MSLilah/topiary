@@ -20,7 +20,7 @@ public class MeleeAttackController : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.tag == "Enemy") {
+		if (other.gameObject.tag == "Enemy" && GetComponents<BoxCollider2D>()[1].enabled) {
 			HedgeController hc = other.gameObject.GetComponent<HedgeController>();
 			hc.DecreaseState();
 		}

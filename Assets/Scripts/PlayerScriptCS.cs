@@ -35,7 +35,7 @@ public class PlayerScriptCS : MonoBehaviour {
 		if (GetComponent<GunController> ().enabled == true) 
 		{
 			
-			if (col.gameObject.tag == "Enemy" && !isDamaged) 
+			if (col.gameObject.tag == "Enemy" && !isDamaged && col.gameObject.renderer.enabled) 
 			{
 				playerHealth--;
 				
@@ -98,5 +98,9 @@ public class PlayerScriptCS : MonoBehaviour {
 			playerHealth = 5.0f;
 			
 		}
+	}
+	
+	void OnGUI() {
+		GUI.Label (new Rect(10, 10, 100, 20), "Health: " + playerHealth);
 	}
 }

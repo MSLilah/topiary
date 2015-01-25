@@ -17,10 +17,9 @@ public class WorldStateEnemyController : MonoBehaviour {
 			hc.enabled = true;
 			ec.enabled = false;
 			renderer.enabled = true;
-			collider2D.enabled = true;
 			rigidbody2D.isKinematic = true;
 			animator.SetBool ("LightWorld", true);
-			GetComponents<BoxCollider2D>()[1].enabled = false;
+			//GetComponents<BoxCollider2D>()[1].enabled = false;
 			if (ec.enemyHealth <= 0.0f) {
 				hc.SetState(HedgeController.HedgeState.OVERGROWN);
 			}
@@ -32,8 +31,9 @@ public class WorldStateEnemyController : MonoBehaviour {
 			hc.enabled = false;
 			ec.enabled = true;
 			rigidbody2D.isKinematic = false;
+			collider2D.enabled = true;
 			animator.SetBool ("LightWorld", false);
-			GetComponents<BoxCollider2D>()[1].enabled = true;
+			//GetComponents<BoxCollider2D>()[1].enabled = true;
 			if (hc.state == HedgeController.HedgeState.OVERGROWN) {
 				ec.enemyHealth = 0.0f;
 			}
