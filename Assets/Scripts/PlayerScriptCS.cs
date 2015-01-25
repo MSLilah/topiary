@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class PlayerScriptCS : MonoBehaviour {
-
-
+	
+	
 	//Player health and damage
 	private float playerHealth = 5.0f;
 	private float playerInvulTime;
@@ -12,10 +12,9 @@ public class PlayerScriptCS : MonoBehaviour {
 	private float enemyX;
 	private float playerX;
 	
-
+	
 	[SerializeField] private Transform spawnPoint;
 	private GameObject SpawnPoint;
-	private float deathTimer = 0.0f;
 	
 	void Start ()
 	{
@@ -25,7 +24,7 @@ public class PlayerScriptCS : MonoBehaviour {
 		// Reset starting position to the spawn point
 		gameObject.transform.position = spawnPoint.position;
 	}
-
+	
 	void Update ()
 	{
 		HandleDamage ();
@@ -33,30 +32,44 @@ public class PlayerScriptCS : MonoBehaviour {
 	
 	void OnTriggerEnter2D (Collider2D col)
 	{
-		if (col.gameObject.tag == "Enemy" && !isDamaged) 
+		if (GetComponent<GunController> ().enabled == true) 
 		{
-			playerHealth--;
 			
-			enemyX = col.transform.position.x;
-			playerX = gameObject.transform.position.x;
-			
-			if (enemyX < playerX)
+			if (col.gameObject.tag == "Enemy" && !isDamaged) 
 			{
-				rigidbody2D.AddForce (Vector3.right * 150);
+				playerHealth--;
+				
+				Debug.Log ("Take damage!");
+				
+				enemyX = col.transform.position.x;
+				playerX = gameObject.transform.position.x;
+				
+				if (enemyX < playerX) 
+				{
+					rigidbody2D.AddForce (Vector3.right * 150);
+				} 
+				
+				else if (enemyX > playerX) 
+				{
+					rigidbody2D.AddForce (Vector3.left * 150);
+				}
+				
+				isDamaged = true;
+				
 			}
-			
-			else if (enemyX > playerX)
-			{
-				rigidbody2D.AddForce (Vector3.left * 150);
-			}
-			
-			isDamaged = true;
 		}
-
-		if (col.gameObject.tag == "Hazard" && !isDamaged) 
+		
+		else if (col.gameObject.tag == "Hazard" && !isDamaged) 
 		{
 			Debug.Log ("Thorns!");
-			playerHealth -= playerHealth;
+			playerHealth--;
+			isDamaged = true;
+		}
+		
+		else if (col.gameObject.tag == "BossWhip" && !isDamaged) 
+		{
+			Debug.Log ("Whipped!");
+			playerHealth--;
 			isDamaged = true;
 		}
 	}
@@ -78,16 +91,12 @@ public class PlayerScriptCS : MonoBehaviour {
 		else if (isDamaged == true && playerHealth <= 0) 
 		{
 			gameObject.renderer.enabled = false;
-			deathTimer += Time.deltaTime;
 			
-			if (deathTimer >= 3.0f)
-			{
-				// Reset starting position to the spawn point
-				gameObject.transform.position = spawnPoint.position;
-				gameObject.renderer.enabled = true;
-				playerHealth = 5.0f;
-				deathTimer = 0.0f;
-			}
+			// Reset starting position to the spawn point
+			gameObject.transform.position = spawnPoint.position;
+			gameObject.renderer.enabled = true;
+			playerHealth = 5.0f;
+			
 		}
 	}
 }
