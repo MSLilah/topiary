@@ -4,7 +4,8 @@ using System.Collections;
 public class MeleeAttackController : MonoBehaviour {
 
 	public bool canAttack = true;
-	
+	private AudioSource sliceAudio;
+
 	private Animator animator;
 	
 	/////////////////////
@@ -13,6 +14,8 @@ public class MeleeAttackController : MonoBehaviour {
 	
 	void Start () {
 		animator = GetComponent<Animator> ();
+		AudioSource[] audios = GetComponents<AudioSource>();
+		sliceAudio = audios [1];
 	}
 	
 	void FixedUpdate () {
@@ -32,7 +35,9 @@ public class MeleeAttackController : MonoBehaviour {
 	
 	void Attack() {
 		if (Input.GetAxisRaw ("Fire1") != 0 && canAttack) {
+			canAttack = false;
 			animator.SetBool("Attack", true);
+			sliceAudio.PlayDelayed(0.4f);
 		}
 	}
 	

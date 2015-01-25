@@ -8,11 +8,15 @@ public class GunController : MonoBehaviour {
 	private bool canFire = true;
 	private float fireTimer = 0.0f;
 	public float fireInterval = 0.2f;
+	private AudioSource gunAudio;
 	
 	public Animator muzzleAnimator;
 	
 	void FixedUpdate () {
 		Fire ();
+		AudioSource[] audios = GetComponents<AudioSource>();
+		gunAudio = audios [2];
+		gunAudio.volume = 0.3f;
 	}
 	
 	void Update() {
@@ -28,6 +32,8 @@ public class GunController : MonoBehaviour {
 		if (Input.GetAxisRaw ("Fire1") != 0 && canFire) {
 			muzzleAnimator.SetTrigger("Shoot");
 			CreateBullet();
+			gunAudio.Play ();
+			canFire = false;
 		}
 	}
 	
