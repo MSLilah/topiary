@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour {
 	public LayerMask whatIsWall;
 	
 	private bool falling = false;
+	
+	public int score = 0;
 
 	private Animator animator;
 	
@@ -87,6 +89,10 @@ public class PlayerController : MonoBehaviour {
 			animator.SetBool("Fall", true);
 		}
 	}
+	
+	void OnGUI() {
+		GUI.Label (new Rect(200, 10, 100, 20), "Score: " + score);
+	}
 
 	/////////////////////
 	/// Our Functions
@@ -150,6 +156,14 @@ public class PlayerController : MonoBehaviour {
 			GetComponent<GunController>().enabled = true;
 			GetComponent<MeleeAttackController>().enabled = false;
 		}
+	}
+	
+	public void DecreaseScore() {
+		score = Mathf.Max(0, score - 5);
+	}
+	
+	public void IncreaseScore() {
+		score += 10;
 	}
 
 }
