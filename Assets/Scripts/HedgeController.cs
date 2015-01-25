@@ -4,21 +4,24 @@ using System.Collections;
 public class HedgeController : MonoBehaviour {
 	public enum HedgeState {DEAD, TRIMMED, OVERGROWN};
 	public HedgeState state = HedgeState.TRIMMED;
+	public Sprite trimmedSprite;
+	public Sprite overgrownSprite;
+	public Sprite deadSprite;
+	
+	private Animator animator;
+	
+	void Start() {
+		animator = GetComponent<Animator>();
+	}
 
 	void Update() {
-		SpriteRenderer spriteRenderer = renderer as SpriteRenderer;
-		switch (state) {
-			case HedgeState.OVERGROWN:
-				spriteRenderer.color = Color.red;
-				break;
-			case HedgeState.TRIMMED:
-				spriteRenderer.color = Color.green;
-				break;
-			case HedgeState.DEAD:
-				spriteRenderer.color = Color.gray;
-				collider2D.enabled = false;
-				break;
+		
+		animator.SetInteger("HedgeState", (int)state);
+		
+		if (state == HedgeState.DEAD) {
+			collider2D.enabled = false;
 		}
+		
 	}
 	
 	public void DecreaseState() {
