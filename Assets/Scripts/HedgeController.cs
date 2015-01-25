@@ -27,6 +27,13 @@ public class HedgeController : MonoBehaviour {
 	public void DecreaseState() {
 		if (state != HedgeState.DEAD) {
 			state--;
+			
+			if (state == HedgeState.TRIMMED) {
+				GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerController>().IncreaseScore();
+			}
+			else if (state == HedgeState.DEAD) {
+				GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerController>().DecreaseScore();
+			}
 		}
 	}
 	

@@ -46,6 +46,9 @@ public class EnemyController : MonoBehaviour {
 		{
 			enemyHealth--;
 			Debug.Log ("Took damage!");
+			if (enemyHealth <= 0.0f) {
+				GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().IncreaseScore();
+			}
 		}
 	}
 
