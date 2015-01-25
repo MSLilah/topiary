@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 	public float jumpForceMagnitude = 100f;
 	public bool facingRight = false;
 
+	bool canJump = true;
 	bool grounded = false;
 	public Transform groundCheck;
 	float groundWallRadius = 0.2f;
@@ -34,7 +35,10 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Update() {
-		if (Input.GetAxisRaw ("Jump") != 0) {
+		if (Input.GetKeyUp(KeyCode.Space)) {
+			canJump = true;
+		}
+		if (Input.GetKeyDown(KeyCode.Space) && canJump) {
 			if (grounded) {
 				rigidbody2D.AddForce (new Vector2(0, jumpForceMagnitude));
 			}

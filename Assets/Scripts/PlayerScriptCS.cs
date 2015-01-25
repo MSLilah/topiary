@@ -11,8 +11,26 @@ public class PlayerScriptCS : MonoBehaviour {
 	private float knockbackDir;
 	private float enemyX;
 	private float playerX;
+	
 
+	[SerializeField] private Transform spawnPoint;
+	private GameObject SpawnPoint;
+	private float deathTimer = 0.0f;
+	
+	void Start ()
+	{
+		SpawnPoint = GameObject.Find ("SpawnPoint");
+		spawnPoint = SpawnPoint.transform;
+		
+		// Reset starting position to the spawn point
+		gameObject.transform.position = spawnPoint.position;
+	}
 
+	void Update ()
+	{
+		HandleDamage ();
+	}
+	
 	void OnTriggerEnter2D (Collider2D col)
 	{
 		if (col.gameObject.tag == "Enemy" && !isDamaged) 
@@ -34,6 +52,13 @@ public class PlayerScriptCS : MonoBehaviour {
 			
 			isDamaged = true;
 		}
+
+		if (col.gameObject.tag == "Hazard" && !isDamaged) 
+		{
+			Debug.Log ("Thorns!");
+			playerHealth -= playerHealth;
+			isDamaged = true;
+		}
 	}
 	
 	void HandleDamage ()
@@ -52,8 +77,17 @@ public class PlayerScriptCS : MonoBehaviour {
 		
 		else if (isDamaged == true && playerHealth <= 0) 
 		{
-			Destroy (gameObject);
+			gameObject.renderer.enabled = false;
+			deathTimer += Time.deltaTime;
+			
+			if (deathTimer >= 3.0f)
+			{
+				// Reset starting position to the spawn point
+				gameObject.transform.position = spawnPoint.position;
+				gameObject.renderer.enabled = true;
+				playerHealth = 5.0f;
+				deathTimer = 0.0f;
+			}
 		}
-		
 	}
 }

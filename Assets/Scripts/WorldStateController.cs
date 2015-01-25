@@ -5,13 +5,34 @@ public class WorldStateController : MonoBehaviour {
 
 	private bool lightWorld = true;
 	private float timer = 0.0f;
+	private float timerLife;
+	
+	public float minTime = 5.0f;
+	public float maxTime = 15.0f;
+	private bool switchTrigger = false;
+	
+	void Start() {
+		//ChangeWorldState ();
+	}
 	
 	void Update() {
-		timer += Time.deltaTime;
-		if (timer > 2.0f) {
-			Debug.Log ("Changing World State");
-			ChangeWorldState();
-			timer = 0.0f;
+		
+		if (switchTrigger) {
+			timer += Time.deltaTime;
+			if (timer > 2.0f) {
+				Debug.Log ("Changing World State");
+				ChangeWorldState();
+				timer = 0.0f;
+				timerLife = Random.Range (minTime, maxTime);
+			}
+		}
+	}
+	
+	void OnTriggerEnter2D() {
+		if (!switchTrigger) {
+			switchTrigger = true;
+			ChangeWorldState ();
+			timerLife = Random.Range (minTime, maxTime);
 		}
 	}
 	

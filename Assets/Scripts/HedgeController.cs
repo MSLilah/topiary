@@ -16,6 +16,7 @@ public class HedgeController : MonoBehaviour {
 				break;
 			case HedgeState.DEAD:
 				spriteRenderer.color = Color.gray;
+				collider2D.enabled = false;
 				break;
 		}
 	}

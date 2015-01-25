@@ -11,6 +11,8 @@ public class WorldStateEnemyController : MonoBehaviour {
 			ec.enabled = false;
 			renderer.enabled = true;
 			collider2D.enabled = true;
+			rigidbody2D.isKinematic = true;
+			GetComponents<BoxCollider2D>()[1].enabled = false;
 			if (ec.enemyHealth <= 0.0f) {
 				hc.SetState(HedgeController.HedgeState.OVERGROWN);
 			}
@@ -21,12 +23,15 @@ public class WorldStateEnemyController : MonoBehaviour {
 		else {
 			hc.enabled = false;
 			ec.enabled = true;
+			rigidbody2D.isKinematic = false;
+			GetComponents<BoxCollider2D>()[1].enabled = true;
 			if (hc.state == HedgeController.HedgeState.OVERGROWN) {
-				ec.enemyHealth = 3.0f;
+				ec.enemyHealth = 0.0f;
 			}
 			else {
-				ec.enemyHealth = 0.0f;
+				ec.enemyHealth = 3.0f;
 			}
 		}
 	}
 }
+ 

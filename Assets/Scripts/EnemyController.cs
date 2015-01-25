@@ -82,6 +82,7 @@ public class EnemyController : MonoBehaviour {
 		{
 			renderer.enabled = false;
 			collider2D.enabled = false;
+			rigidbody2D.isKinematic = true;
 			enabled = false;
 		}
 	}
