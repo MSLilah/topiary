@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour {
 
 	bool wallJumpLeft = false;
 	bool wallJumpRight = false;
+	bool wallJumped = false;
+	float wallJumpedTimer = 0.0f;
 	public Transform wallCheckRight;
 	public Transform wallCheckLeft;
 	public LayerMask whatIsWall;
@@ -35,18 +37,30 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Update() {
+		if (wallJumped) {
+			wallJumpedTimer += Time.deltaTime;
+			if (wallJumpedTimer > 0.2f) {
+				wallJumped = false;
+				wallJumpedTimer = 0.0f;
+			}
+		}
 		if (Input.GetKeyUp(KeyCode.Space)) {
 			canJump = true;
 		}
 		if (Input.GetKeyDown(KeyCode.Space) && canJump) {
 			if (grounded) {
 				rigidbody2D.AddForce (new Vector2(0, jumpForceMagnitude));
+				canJump = false;
 			}
 			else if (wallJumpLeft) {
-				rigidbody2D.AddForce (new Vector2(jumpForceMagnitude / 2, jumpForceMagnitude));
+				rigidbody2D.AddForce (new Vector2(jumpForceMagnitude, jumpForceMagnitude));
+				canJump = false;
+				wallJumped = true;
 			}
 			else if (wallJumpRight) {
-				rigidbody2D.AddForce (new Vector2(-jumpForceMagnitude / 2, jumpForceMagnitude));
+				rigidbody2D.AddForce (new Vector2(-jumpForceMagnitude, jumpForceMagnitude));
+				canJump = false;
+				wallJumped = true;
 			}
 		}
 	}
@@ -59,7 +73,7 @@ public class PlayerController : MonoBehaviour {
 
 		if (grounded)
 			rigidbody2D.velocity = new Vector2 (move * maxSpeed, rigidbody2D.velocity.y);
-		else {
+		else if (!wallJumped) {
 			float velocityChange = Mathf.Clamp(move * maxSpeed / 4 + rigidbody2D.velocity.x, -maxSpeed, maxSpeed);
 			rigidbody2D.velocity = new Vector2(velocityChange, rigidbody2D.velocity.y);
 		}
@@ -83,6 +97,11 @@ public class PlayerController : MonoBehaviour {
 		if (!grounded) {
 			wallJumpLeft = Physics2D.OverlapCircle (wallCheckLeft.position, groundWallRadius, whatIsWall);
 			wallJumpRight = Physics2D.OverlapCircle (wallCheckRight.position, groundWallRadius, whatIsWall);
+			if (facingRight) {
+				bool temp = wallJumpLeft;
+				wallJumpLeft = wallJumpRight;
+				wallJumpRight = temp;
+			}
 		}
 	}
 
