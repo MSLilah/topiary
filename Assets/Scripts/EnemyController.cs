@@ -14,7 +14,7 @@ public class EnemyController : MonoBehaviour {
 	public  bool walkingRight = true;
 	private bool facingRight = true;
 
-	private float enemyHealth = 3.0f;
+	public float enemyHealth = 3.0f;
 
 
 	Vector2 walkAmount;
@@ -79,6 +79,7 @@ public class EnemyController : MonoBehaviour {
 			Destroy (gameObject);
 		}
 	}
+	
 	void Flip() {
 		facingRight = !facingRight;
 	}

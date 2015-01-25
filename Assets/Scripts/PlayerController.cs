@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour {
 
 	public float maxSpeed = 10f;
 	public float jumpForceMagnitude = 100f;
-	private bool facingRight = false;
+	public bool facingRight = false;
 
 	bool grounded = false;
 	public Transform groundCheck;
@@ -18,18 +18,8 @@ public class PlayerController : MonoBehaviour {
 	public Transform wallCheckLeft;
 	public LayerMask whatIsWall;
 
-	public GameObject bullet;
-	public Transform bulletSpawner;
-	private bool canFire = true;
-	private float fireTimer = 0.0f;
-	public float fireInterval = 0.2f;
-	
-	public bool canAttack = true;
-	private float attackTimer = 0.0f;
-	private float attackLength = 2.0f;
-
 	private Animator animator;
-
+	
 	/////////////////////
 	/// Unity Functions
 	/////////////////////
@@ -41,8 +31,6 @@ public class PlayerController : MonoBehaviour {
 	
 	void FixedUpdate () {
 		MovePlayer ();
-		Fire ();
-		Attack ();
 	}
 
 	void Update() {
@@ -57,26 +45,12 @@ public class PlayerController : MonoBehaviour {
 				rigidbody2D.AddForce (new Vector2(-jumpForceMagnitude / 2, jumpForceMagnitude));
 			}
 		}
-		
-		if (!canFire) {
-			fireTimer += Time.deltaTime;
-			if (fireTimer >= fireInterval) {
-				canFire = true;
-			}
-		}
-	}
-
-	void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.tag == "Enemy") {
-			HedgeController hc = other.gameObject.GetComponent<HedgeController>();
-			hc.DecreaseState();
-		}
 	}
 
 	/////////////////////
 	/// Our Functions
 	/////////////////////
-	void MovePlayer() {
+	private void MovePlayer() {
 		float move = Input.GetAxis ("Horizontal");
 
 		if (grounded)
@@ -108,37 +82,23 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-	void Fire() {
-		if (Input.GetAxisRaw ("Fire1") != 0 && canFire) {
-			GameObject newBullet = Instantiate(bullet, bulletSpawner.position, Quaternion.identity) as GameObject;
-			newBullet.GetComponent<BulletController>().facingRight = facingRight;
-			fireTimer = 0.0f;
-			canFire = false;
-		}
-	}
-
-	void Attack() {
-		if (Input.GetAxisRaw ("Fire1") != 0 && canAttack) {
-			animator.SetBool("Attack", true);
-		}
-	}
-
-	void TurnOffAttackCollider() {
-		gameObject.GetComponents<BoxCollider2D>()[1].enabled = false;
-		canAttack = true;
-		animator.SetBool ("Attack", false);
-	}
-
-	void TurnOnAttackCollider() {
-		gameObject.GetComponents<BoxCollider2D>()[1].enabled = true;
-	}
-
-	void Flip() {
+	private void Flip() {
 		facingRight = !facingRight;
 
 		Vector3 scale = transform.localScale;
 		scale.x *= -1;
 		transform.localScale = scale;
+	}
+	
+	public void WorldStateChange(bool lightWorld) {
+		if (lightWorld) {
+			GetComponent<GunController>().enabled = false;
+			GetComponent<MeleeAttackController>().enabled = true;
+		}
+		else {
+			GetComponent<GunController>().enabled = true;
+			GetComponent<MeleeAttackController>().enabled = false;
+		}
 	}
 
 }

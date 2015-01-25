@@ -25,4 +25,8 @@ public class HedgeController : MonoBehaviour {
 			state--;
 		}
 	}
+	
+	public void SetState(HedgeState newState) {
+		state = newState;
+	}
 }
