@@ -47,8 +47,10 @@ public class EnemyController : MonoBehaviour {
 
 	void Update () 
 	{
-		EnemyMovement ();
-		ShootBullet ();
+		if (enemyHealth > 0) {
+			EnemyMovement ();
+			ShootBullet ();
+		}
 		HandleDeath ();
 	}
 
@@ -74,9 +76,13 @@ public class EnemyController : MonoBehaviour {
 
 	void HandleDeath () 
 	{
+		//Stop rendering the enemy and disable this script if
+		//the enemy is dead
 		if (enemyHealth <= 0) 
 		{
-			Destroy (gameObject);
+			renderer.enabled = false;
+			collider2D.enabled = false;
+			enabled = false;
 		}
 	}
 	

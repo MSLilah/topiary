@@ -9,6 +9,8 @@ public class WorldStateEnemyController : MonoBehaviour {
 		if (lightWorld) {
 			hc.enabled = true;
 			ec.enabled = false;
+			renderer.enabled = true;
+			collider2D.enabled = true;
 			if (ec.enemyHealth <= 0.0f) {
 				hc.SetState(HedgeController.HedgeState.OVERGROWN);
 			}
