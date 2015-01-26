@@ -16,6 +16,8 @@ public class PlayerScriptCS : MonoBehaviour {
 	[SerializeField] private Transform spawnPoint;
 	private GameObject SpawnPoint;
 	
+	public GUIStyle style;
+	
 	void Start ()
 	{
 		SpawnPoint = GameObject.Find ("SpawnPoint");
@@ -59,19 +61,20 @@ public class PlayerScriptCS : MonoBehaviour {
 			}
 		}
 		
-		else if (col.gameObject.tag == "Hazard" && !isDamaged) 
+		if (col.gameObject.tag == "BossWhip" && !isDamaged) 
+		{
+			Debug.Log ("Whipped!");
+			playerHealth--;
+			isDamaged = true;
+		}
+		
+		if (col.gameObject.tag == "Hazard" && !isDamaged) 
 		{
 			Debug.Log ("Thorns!");
 			playerHealth--;
 			isDamaged = true;
 		}
 		
-		else if (col.gameObject.tag == "BossWhip" && !isDamaged) 
-		{
-			Debug.Log ("Whipped!");
-			playerHealth--;
-			isDamaged = true;
-		}
 	}
 	
 	void HandleDamage ()
@@ -101,6 +104,6 @@ public class PlayerScriptCS : MonoBehaviour {
 	}
 	
 	void OnGUI() {
-		GUI.Label (new Rect(10, 10, 100, 20), "Health: " + playerHealth);
+		GUI.Label (new Rect(10, 10, 100, 20), "Health: " + playerHealth, style);
 	}
 }

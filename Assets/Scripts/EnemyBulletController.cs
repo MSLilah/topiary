@@ -23,7 +23,7 @@ public class EnemyBulletController : MonoBehaviour {
 		//	GameObject.Destroy (gameObject);
 		//}
 		
-		if (other.gameObject.tag == "Player") 
+		if (other.gameObject.tag != "Enemy") 
 		{
 			Destroy (gameObject);
 		}

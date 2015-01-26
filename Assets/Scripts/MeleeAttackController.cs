@@ -27,6 +27,9 @@ public class MeleeAttackController : MonoBehaviour {
 			HedgeController hc = other.gameObject.GetComponent<HedgeController>();
 			hc.DecreaseState();
 		}
+		else if (other.gameObject.tag == "Boss") {
+			other.gameObject.GetComponent<BossStateMachine>().bossHealth -= 2;
+		}
 	}
 	
 	/////////////////////

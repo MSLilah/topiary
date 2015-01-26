@@ -57,6 +57,7 @@ public class WorldStateController : MonoBehaviour {
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
 		GameObject[] enemies = GameObject.FindGameObjectsWithTag ("Enemy");
 		GameObject[] terrain = GameObject.FindGameObjectsWithTag("Terrain");
+		GameObject[] backgrounds = GameObject.FindGameObjectsWithTag ("Background");
 		
 		Debug.Log (player);
 		
@@ -68,6 +69,9 @@ public class WorldStateController : MonoBehaviour {
 		
 		foreach (GameObject block in terrain) {
 			block.GetComponent<TerrainController>().WorldStateChange(lightWorld);
+		}
+		foreach (GameObject back in backgrounds) {
+			back.renderer.enabled = !back.renderer.enabled;
 		}
 	}
 }

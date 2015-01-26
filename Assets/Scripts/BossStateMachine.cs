@@ -19,12 +19,9 @@ public class BossStateMachine : MonoBehaviour {
 	private float stateTimer = 0.0f;
 	private float attackTimer;
 
-	private float bossHealth = 75;
+	public float bossHealth = 30;
 
 	private BossStates curState;
-
-	[SerializeField] private GameObject whipCollider;
-	[SerializeField] private Transform whipTrans;
 
 	[SerializeField] private GameObject bossGnome;
 	[SerializeField] private Transform gnomeSpawn1;
@@ -71,6 +68,7 @@ public class BossStateMachine : MonoBehaviour {
 			SetState(BossStates.DEATH);
 			animator.SetTrigger ("Dead");
 		}
+		Debug.Log(curState);
 		fsm[curState].Invoke ();
 	}
 
@@ -153,5 +151,9 @@ public class BossStateMachine : MonoBehaviour {
 			SetState (BossStates.IDLE);
 			animator.SetTrigger("Idle");
 		}
+	}
+	
+	public void EndGame() {
+		Application.LoadLevel (2);
 	}
 }

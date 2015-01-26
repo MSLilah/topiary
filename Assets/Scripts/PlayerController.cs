@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour {
 
 	private Animator animator;
 	
+	public GUIStyle style;
+	
 	/////////////////////
 	/// Unity Functions
 	/////////////////////
@@ -58,10 +60,10 @@ public class PlayerController : MonoBehaviour {
 				wallJumpedTimer = 0.0f;
 			}
 		}
-		if (Input.GetKeyUp(KeyCode.Space)) {
+		if (Input.GetKeyUp(KeyCode.Space) || Input.GetButtonUp ("Jump")) {
 			canJump = true;
 		}
-		if (Input.GetKeyDown(KeyCode.Space) && canJump) {
+		if ((Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Jump")) && canJump) {
 			if (grounded) {
 				rigidbody2D.AddForce (new Vector2(0, jumpForceMagnitude));
 				canJump = false;
@@ -98,7 +100,7 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	void OnGUI() {
-		GUI.Label (new Rect(200, 10, 100, 20), "Score: " + score);
+		GUI.Label (new Rect(200, 10, 100, 20), "Score: " + score, style);
 	}
 
 	/////////////////////
